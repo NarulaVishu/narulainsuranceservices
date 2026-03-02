@@ -131,38 +131,69 @@
           <h2 class="text-slate-900 text-3xl font-bold">Contact Us</h2>
           <p class="text-[15px] text-slate-600 mt-4 leading-relaxed">Fill out the form below and we'll get back to you as soon as possible.</p>
 
-          <form>
-            <div class="space-y-4 mt-8">
-              <input type="text" placeholder="Full Name"
-                class="px-2 py-3 bg-white w-full text-slate-900 text-sm border-b border-slate-300 focus:border-blue-600 outline-none" />
-              
-              <div class="grid sm:grid-cols-2 gap-y-4 gap-x-6">
-                <input type="text" placeholder="City"
-                  class="px-2 py-3 bg-white w-full text-slate-900 text-sm border-b border-slate-300 focus:border-blue-600 outline-none" />
+          <form action="https://formsubmit.co/narula.vishu10@gmail.com" method="POST">
 
-                
-              </div>
-              <input type="number" placeholder="Phone No."
-                class="px-2 py-3 bg-white w-full text-slate-900 text-sm border-b border-slate-300 focus:border-blue-600 outline-none" />
+  <!-- Hidden Settings -->
+  <input type="hidden" name="_subject" value="New Insurance Enquiry - Narula Insurance">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_next" value="https://narulainsuranceservices.vercel.app/thankyou.html">
+  <input type="hidden" name="_autoresponse" value="Thank you for contacting Narula Insurance. We will contact you shortly.">
 
-              <input type="email" placeholder="Email"
-                class="px-2 py-3 bg-white w-full text-slate-900 text-sm border-b border-slate-300 focus:border-blue-600 outline-none" />
+  <div class="space-y-4 mt-8">
 
-              <textarea placeholder="Write Message"
-                class="px-2 pt-3 bg-white w-full text-slate-900 text-sm border-b border-slate-300 focus:border-blue-600 outline-none"></textarea>
-            </div>
+    <!-- Full Name -->
+    <input type="text" name="Full Name" placeholder="Full Name" required
+      class="px-2 py-3 bg-white w-full text-slate-900 text-sm border-b border-slate-300 focus:border-blue-600 outline-none" />
 
-            <button type="button"
-              class="mt-8 flex items-center justify-center text-sm font-medium w-full px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white cursor-pointer">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill='#fff' class="mr-2"
-                viewBox="0 0 548.244 548.244">
-                <path fill-rule="evenodd"
-                  d="M392.19 156.054 211.268 281.667 22.032 218.58C8.823 214.168-.076 201.775 0 187.852c.077-13.923 9.078-26.24 22.338-30.498L506.15 1.549c11.5-3.697 24.123-.663 32.666 7.88 8.542 8.543 11.577 21.165 7.879 32.666L390.89 525.906c-4.258 13.26-16.575 22.261-30.498 22.338-13.923.076-26.316-8.823-30.728-22.032l-63.393-190.153z"
-                  clip-rule="evenodd" data-original="#000000" />
-              </svg>
-              Send Message
-            </button>
-          </form>
+    <!-- City -->
+    <input type="text" name="City" placeholder="City" required
+      class="px-2 py-3 bg-white w-full text-slate-900 text-sm border-b border-slate-300 focus:border-blue-600 outline-none" />
+
+    <!-- Phone -->
+    <input type="tel" name="Phone Number" placeholder="Phone No." required
+      class="px-2 py-3 bg-white w-full text-slate-900 text-sm border-b border-slate-300 focus:border-blue-600 outline-none" />
+
+    <!-- Email -->
+    <input type="email" name="Email" placeholder="Email" required
+      class="px-2 py-3 bg-white w-full text-slate-900 text-sm border-b border-slate-300 focus:border-blue-600 outline-none" />
+
+    <!-- Insurance Type -->
+    <select name="Insurance Type" required
+      class="px-2 py-3 bg-white w-full text-slate-900 text-sm border-b border-slate-300 focus:border-blue-600 outline-none">
+      <option value="">Select Insurance Type</option>
+      <option>Fire Insurance</option>
+      <option>Burglary Insurance</option>
+      <option>Factory Insurance</option>
+      <option>Shop Insurance</option>
+      <option>Worker Comprehensive Insurance</option>
+      <option>Life Insurance</option>
+      <option>Motor Insurance</option>
+      <option>Health Insurance</option>
+      <option>Travel Insurance</option>
+    </select>
+
+    <!-- Message -->
+    <textarea name="Message" placeholder="Write Message" 
+      class="px-2 pt-3 bg-white w-full text-slate-900 text-sm border-b border-slate-300 focus:border-blue-600 outline-none"></textarea>
+
+  </div>
+
+  <!-- Submit Button -->
+  <button type="submit"
+    class="mt-8 flex items-center justify-center text-sm font-medium w-full px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white cursor-pointer transition duration-300">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="#fff" class="mr-2"
+      viewBox="0 0 548.244 548.244">
+      <path fill-rule="evenodd"
+        d="M392.19 156.054 211.268 281.667 22.032 218.58C8.823 214.168-.076 201.775 0 187.852c.077-13.923 9.078-26.24 22.338-30.498L506.15 1.549c11.5-3.697 24.123-.663 32.666 7.88 8.542 8.543 11.577 21.165 7.879 32.666L390.89 525.906c-4.258 13.26-16.575 22.261-30.498 22.338-13.923.076-26.316-8.823-30.728-22.032l-63.393-190.153z"
+        clip-rule="evenodd" />
+    </svg>
+
+    Send Message
+  </button>
+
+</form>
 
           <ul class="mt-4 flex flex-wrap justify-center gap-6">
             <li class="flex items-center text-blue-600">
