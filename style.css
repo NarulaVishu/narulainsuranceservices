@@ -1,0 +1,67 @@
+/* ===== LOGO SLIDER WRAPPER ===== */
+.logo-slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+/* ===== MOVING TRACK ===== */
+.logo-track {
+    display: flex;
+    gap: 40px;
+    width: max-content;
+    animation: scrollLogos 25s linear infinite;
+}
+
+/* Pause on hover (optional) */
+.logo-slider:hover .logo-track {
+    animation-play-state: paused;
+}
+
+/* ===== LOGO CARD ===== */
+.logo-card {
+    flex: 0 0 auto;
+    width: 170px;
+    height: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes scrollLogos {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+@keyframes bounceSlow {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* moves up slightly */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceSlow1 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px); /* moves up slightly */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bounce-animation {
+  animation: bounceSlow 3s ease-in-out infinite;
+}
+
+.bounce-animation1 {
+  animation: bounceSlow1 4s ease-in infinite;
+}

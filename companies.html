@@ -1,0 +1,463 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4'></script>
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">    
+
+    <style>
+        body {
+            font-family: Poppins, sans-serif;
+        }
+    </style>
+
+</head>
+
+<body class="max-w-[1920px] mx-auto ">
+    <div class="bg-white text-slate-900 text-[15px]">
+        <!-- navbar -->
+       <header class="sticky top-0 flex shadow-md py-2 px-4 sm:px-10 bg-white min-h-[70px] tracking-wide z-50">
+            <div class="flex flex-wrap items-center justify-between gap-5 w-full">
+                <a href="index.html" class="max-sm:hidden"><img src="images/logo1.png"
+                        alt="logo" class="w-80" /></a>
+                <a href="index.html" class="hidden max-sm:block"><img
+                        src="images/logo1.png" alt="logo" class="w-40" /></a>
+
+                <div id="collapseMenu"
+                    class="max-xl:hidden xl:!block max-xl:before:fixed max-xl:before:bg-black max-xl:before:opacity-50 max-xl:before:inset-0 max-xl:before:z-50">
+                    <button id="toggleClose"
+                        class="xl:hidden cursor-pointer fixed top-2 right-4 z-[100] rounded-full bg-white w-9 h-9 flex items-center justify-center border">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 fill-black"
+                            viewBox="0 0 320.591 320.591">
+                            <path
+                                d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
+                                data-original="#000000"></path>
+                            <path
+                                d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
+                                data-original="#000000"></path>
+                        </svg>
+                    </button>
+
+                    <ul
+                        class="xl:flex gap-x-5 max-xl:space-y-3 max-xl:fixed max-xl:bg-white max-xl:w-1/2 max-xl:min-w-[300px] max-xl:top-0 max-xl:left-0 max-xl:p-6 max-xl:h-full max-xl:shadow-md max-xl:overflow-auto z-50">
+                        <li class="mb-6 hidden max-xl:block">
+                            <a href="index.html"><img src="images/logo1.png" alt="logo"
+                                    class="w-36" />
+                            </a>
+                        </li>
+                        <li class="max-xl:border-b max-xl:border-gray-300 max-xl:py-3 px-3">
+                            <a href='index.html' class="hover:text-blue-700 block font-medium">Home</a>
+                        </li>
+                        <li class="max-xl:border-b max-xl:border-gray-300 max-xl:py-3 px-3">
+                            <a href='about.html' class="hover:text-blue-700 block font-medium">About Us</a>
+                        </li>
+                        
+                        <li class="max-xl:border-b max-xl:border-gray-300 max-xl:py-3 px-3 text-blue-700">
+                            <a href='companies.html' class="hover:text-blue-700 block font-medium">Companies</a>
+                        </li>
+                        <li class="group max-lg:border-b max-lg:border-gray-300 max-lg:py-3 relative">
+                <p class="hover:text-blue-700 text-gray-600 text-[15px] font-semibold lg:hover:fill-blue-700 block">Services<svg
+                    xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" class="ml-1 inline-block fill-current"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M12 16a1 1 0 0 1-.71-.29l-6-6a1 1 0 0 1 1.42-1.42l5.29 5.3 5.29-5.29a1 1 0 0 1 1.41 1.41l-6 6a1 1 0 0 1-.7.29z"
+                      data-name="16" data-original="#000000" />
+                  </svg>
+                </p>
+                <ul
+                  class="absolute shadow-lg bg-white space-y-3 lg:top-5 max-lg:top-8 -left-6 min-w-[250px] z-50 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500">
+                  <li class="border-b border-gray-300 py-2"><a href='policy_guidance.html'
+                    class="hover:text-blue-700 text-gray-600 text-[15px] font-medium block">Policy Guidance and Advisory</a></li>
+                  <li class="border-b border-gray-300 py-2"><a href='claim_assistance.html'
+                    class="hover:text-blue-700 text-gray-600 text-[15px] font-medium block">Claim Assistance and Support</a></li>
+                  
+                </ul>
+              </li>
+                        <!-- <li class="max-xl:border-b max-xl:border-gray-300 max-xl:py-3 px-3">
+                            <a href='#testimonials' class="hover:text-blue-700 block font-medium">Testimonials</a>
+                        </li> -->
+                        
+                        <li class="max-xl:border-b max-xl:border-gray-300 max-xl:py-3 px-3 ">
+                            <a href='contact.html' class="hover:text-blue-700 block font-medium">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex max-xl:ml-auto gap-4">
+                    <a href="https://wa.me/919896682405"
+   target="_blank"
+   class="flex items-center justify-center w-14 h-14 
+          bg-[#25D366] hover:bg-[#1DA851] 
+          rounded-full shadow-lg hover:shadow-xl 
+          transition-all duration-300">
+
+    <!-- Official WhatsApp Logo SVG -->
+    <svg xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 32 32"
+         class="w-7 h-7"
+         fill="white">
+        <path d="M16 .396C7.164.396 0 7.56 0 16.396c0 2.893.756 5.71 2.192 8.196L0 32l7.602-2.153a15.93 15.93 0 008.398 2.396h.006C24.84 32.243 32 25.08 32 16.243 32 7.407 24.836.243 16 .243zm0 29.09a13.02 13.02 0 01-6.64-1.82l-.474-.282-4.51 1.277 1.204-4.397-.308-.451a13.05 13.05 0 1123.68-7.17c0 7.195-5.85 13.043-13.043 13.043zm7.167-9.79c-.392-.196-2.317-1.144-2.676-1.274-.36-.13-.622-.196-.884.196-.261.392-1.013 1.274-1.242 1.537-.228.261-.457.294-.849.098-.392-.196-1.654-.61-3.15-1.95-1.164-1.038-1.95-2.32-2.178-2.712-.228-.392-.024-.604.172-.8.176-.175.392-.457.588-.686.196-.228.261-.392.392-.653.13-.261.065-.49-.033-.686-.098-.196-.884-2.134-1.21-2.925-.317-.761-.64-.658-.884-.67l-.752-.013c-.261 0-.686.098-1.046.49s-1.373 1.34-1.373 3.267 1.406 3.79 1.602 4.051c.196.261 2.767 4.225 6.704 5.925.937.405 1.667.646 2.237.826.94.3 1.797.258 2.474.157.755-.112 2.317-.947 2.643-1.863.327-.915.327-1.7.228-1.863-.098-.163-.359-.261-.751-.457z"/>
+    </svg>
+
+</a>
+
+                    <button id="toggleOpen" class="xl:hidden cursor-pointer">
+                        <svg class="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- company section  -->
+       <section class="bg-white ">
+    <div class="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
+        <h2 class="mb-6  text-3xl font-bold tracking-tight leading-tight text-center text-black  md:text-4xl uppercase">Companies with which We deal</h2>
+        <p class="text-xl mb-8 text-center text-black">We proudly partner with India’s leading and IRDA-approved insurance companies to provide our clients with reliable coverage, competitive premiums, and smooth claim support. Our partnerships allow us to compare policies and recommend the best solution tailored to your needs.</p>
+        <div class="grid grid-cols-2 gap-8 text-gray-500 sm:gap-12 md:grid-cols-3 lg:grid-cols-5 dark:text-gray-400">
+            <div class="logo-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsa1Z3J06LUTQ9Ns-ug5KMkqs9Z_0uk1mxRg&s" style="height:80px" class="rounded-lg"></div>
+        <div class="logo-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyKVzM50uqeKSR1zPfcHwHrPfNKgneXwVZ5g&s" style="height:80px" class="rounded-lg"></div>
+        <div class="logo-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcx-bJq3kuX1uCADLTES-qARIw7xiK75XPvg&s" style="height:80px" class="rounded-lg"></div>
+        <div class="logo-card"><img src="https://etimg.etb2bimg.com/photo/54363745.cms" style="height:80px" class="rounded-lg"></div>
+        <div class="logo-card"><img src="https://bimabazaar.com/wp-content/uploads/2020/03/HDFC-Ergo-Gen-to-continue-its-merger-with-HDFC-Ergo-Health-this-year.png" style="height:80px" class="rounded-lg"></div>
+        <div class="logo-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwQPTyt7R1Xrha5b5aQXJhdpszz1WAQ2c-8g&s" style="height:80px" class="rounded-lg"></div>
+        <div class="logo-card"><img src="https://windshield-expert.s3.ap-south-1.amazonaws.com/wp-content/uploads/2024/09/17120543/AIS-Windshield-Website-Blog-National-Insurance-Process-in-Kolkata-Sep24.png" style="height:80px" class="rounded-lg"></div>
+        <div class="logo-card"><img src="https://www.healthcareradius.in/cloud/2021/11/15/1200px-Star_Health_and_Allied_Insurance.svg.png" style="height:80px" class="rounded-lg"></div>
+        <div class="logo-card"><img src="https://jainenthospital.org/wp-content/uploads/2025/10/Care-Health-Insurance.webp" style="height:80px" class="rounded-lg"></div>
+        <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/en/e/ed/The_Oriental_Insurance_Company_Logo.svg" style="height:80px" class="rounded-lg"></div>
+
+
+        </div>
+    </div>
+</section>
+
+<!-- Insurance Categories Section -->
+<section class="py-20 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-6">
+    
+    <!-- Heading -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-slate-800 mb-4 uppercase">
+        Insurance Categories We Provide
+      </h2>
+      <p class="text-slate-500 max-w-2xl mx-auto">
+        We partner with leading insurance providers to offer comprehensive and reliable coverage solutions tailored to your needs.
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      
+      <!-- Card 1 -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-2">
+        <div class="text-5xl mb-4">
+            <img src="images/motor.png" alt="Motor Insurance">
+        </div>
+        <h3 class="text-2xl font-semibold text-slate-800 mb-3">Motor Insurance</h3>
+        <p class="text-slate-600 mb-4">
+          Protect your vehicle from accidents, theft, and third-party liabilities with affordable premium plans.
+        </p>
+        <ul class="space-y-2 text-slate-700">
+          <li>✔ Third-Party Cover</li>
+          <li>✔ Comprehensive Plans</li>
+          <li>✔ Zero Depreciation</li>
+        </ul>
+      </div>
+
+      <!-- Card 2 -->  
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-2">
+        <div class="text-5xl mb-4">
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTQ1utMTKpEj2R0-68DEUWIrYdUs6UEbtihdB9GWaGlK5GrOeLx" class="" alt="">
+        </div>
+        <h3 class="text-2xl font-semibold text-slate-800 mb-3">Health Insurance</h3>
+        <p class="text-slate-600 mb-4">
+          Comprehensive medical coverage including hospitalization, pre & post treatment, and cashless facilities.
+        </p>
+        <ul class="space-y-2 text-slate-700">
+          <li>✔ Cashless Treatment</li>
+          <li>✔ Family Floater Plans</li>
+          <li>✔ Critical Illness Cover</li>
+        </ul>
+      </div>
+
+
+     
+
+      <!-- Card 3 -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-2">
+        <div class="text-5xl mb-4">
+            <img src="images/travel.png" alt="Travel Insurance">
+        </div>
+        <h3 class="text-2xl font-semibold text-slate-800 mb-3">Travel Insurance</h3>
+        <p class="text-slate-600 mb-4">
+          Stay protected during domestic and international trips with medical and baggage coverage.
+        </p>
+        <ul class="space-y-2 text-slate-700">
+          <li>✔ Global Coverage</li>
+          <li>✔ Emergency Medical</li>
+          <li>✔ Trip Cancellation</li>
+        </ul>
+      </div>
+
+      
+
+      <!-- Card 4 -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-2">
+        <div class="text-5xl mb-4">
+            <img src="images/accident.png" alt="Personal Accident Insurance">
+        </div>
+        <h3 class="text-2xl font-semibold text-slate-800 mb-3">Personal Accident</h3>
+        <p class="text-slate-600 mb-4">
+          Financial protection against accidental injuries, disability, or unforeseen events.
+        </p>
+        <ul class="space-y-2 text-slate-700">
+          <li>✔ Disability Cover</li>
+          <li>✔ Accidental Death Benefit</li>
+          <li>✔ 24/7 Protection</li>
+        </ul>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-2">
+        <div class="text-5xl mb-4">
+            <img src="images/fire.png" alt="Fire Insurance">
+        </div>
+        <h3 class="text-2xl font-semibold text-slate-800 mb-3">Fire Insurance</h3>
+        <p class="text-slate-600 mb-4">
+          Protection against losses or damages caused by fire, lightning, and natural calamities.
+        </p>
+        <ul class="space-y-2 text-slate-700">
+          <li>✔ Building & Asset Coverage</li>
+          <li>✔ Natural Disaster Protection</li>
+          <li>✔ Quick Claim Support</li>
+        </ul>
+      </div>
+
+      <!-- card 6  -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-2">
+  <div class="text-5xl mb-4">
+    <img src="images/burglary.png" alt="Burglary Insurance">
+  </div>
+  <h3 class="text-2xl font-semibold text-slate-800 mb-3">Burglary Insurance</h3>
+  <p class="text-slate-600 mb-4">
+    Safeguard your property and valuables against theft and burglary losses.
+  </p>
+  <ul class="space-y-2 text-slate-700">
+    <li>✔ Theft Protection</li>
+    <li>✔ Property Damage Cover</li>
+    <li>✔ Secure Business Assets</li>
+  </ul>
+</div>
+
+      <!-- card 7 -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-2">
+  <div class="text-5xl mb-4">
+    <img src="images/shop.png" alt="Shop Insurance">
+  </div>
+  <h3 class="text-2xl font-semibold text-slate-800 mb-3">Shop Insurance</h3>
+  <p class="text-slate-600 mb-4">
+    Protect your retail shop from unexpected damages, theft, and liabilities.
+  </p>
+  <ul class="space-y-2 text-slate-700">
+    <li>✔ Inventory Protection</li>
+    <li>✔ Fire & Theft Cover</li>
+    <li>✔ Public Liability Protection</li>
+  </ul>
+</div>
+
+      <!-- card 8 -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-2">
+  <div class="text-5xl mb-4">
+    <img src="images/factory.png" alt="Factory Insurance">
+  </div>
+  <h3 class="text-2xl font-semibold text-slate-800 mb-3">Factory Insurance</h3>
+  <p class="text-slate-600 mb-4">
+    Comprehensive coverage for factories against operational risks and damages.
+  </p>
+  <ul class="space-y-2 text-slate-700">
+    <li>✔ Machinery Breakdown Cover</li>
+    <li>✔ Fire & Natural Disaster Protection</li>
+    <li>✔ Business Interruption Support</li>
+  </ul>
+</div>
+
+<!-- card 9  -->
+ <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-2">
+  <div class="text-5xl mb-4">
+    <img src="images/worker.png" alt="Worker Comprehensive Insurance">
+  </div>
+  <h3 class="text-2xl font-semibold text-slate-800 mb-3">Worker Comprehensive</h3>
+  <p class="text-slate-600 mb-4">
+    Complete protection for workers against workplace injuries and medical emergencies.
+  </p>
+  <ul class="space-y-2 text-slate-700">
+    <li>✔ Workplace Accident Cover</li>
+    <li>✔ Medical Expense Support</li>
+    <li>✔ Disability & Compensation Benefits</li>
+  </ul>
+</div>
+
+    </div>
+  </div>
+</section>
+
+       
+
+        <!-- footer section -->
+        <footer class="pt-12 pb-8 px-10 tracking-wide">
+        <div class="max-w-screen-xl mx-auto">
+          <div class="flex flex-col lg:flex-row justify-between gap-10">
+
+      <!-- LEFT SIDE (Logo) -->
+      <div class="flex items-start">
+        <a href="index.html">
+          <img src="images/logo1.png" alt="logo" class="w-70">
+        </a>
+      </div>
+
+      <!-- RIGHT SIDE (2 Columns) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-12">
+
+        <!-- Useful Links -->
+        <div>
+          <h4 class="text-base mb-4 text-black font-bold uppercase">
+            Useful Links
+          </h4>
+          <ul class="space-y-4">
+            <li>
+              <a href="index.html" class="text-gray-600 hover:text-blue-600 transition duration-300 text-sm">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="companies.html" class="text-gray-600 hover:text-blue-600 transition duration-300 text-sm">
+                Companies
+              </a>
+            </li>
+            <li>
+              <a href="contact.html" class="text-gray-600 hover:text-blue-600 transition duration-300 text-sm">
+                Contact us
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Information -->
+        <div>
+          <h4 class="text-base mb-4 text-black font-bold uppercase">
+            Information
+          </h4>
+          <ul class="space-y-4">
+            <li>
+              <a href="about.html" class="text-gray-600 hover:text-blue-600 transition duration-300 text-sm">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a href="policy_guidance.html" class="text-gray-600 hover:text-blue-600 transition duration-300 text-sm">
+                Policy guidance and Advisory
+              </a>
+            </li>
+            <li>
+              <a href="claim_assistance.html" class="text-gray-600 hover:text-blue-600 transition duration-300 text-sm">
+                Claim Assistance and support
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom -->
+     <div class="flex justify-between items-center mt-10">
+  
+  <p class="text-gray-500 text-sm font-bold">
+     © 2026 Narula Insurance Services. All rights reserved.
+  </p>
+
+  <p class="text-gray-500 text-sm">
+   Developed and Designed by 
+   <a href="https://www.linkedin.com/in/vishu-narula-252871201/">Vishu Narula</a>
+  </p>
+
+</div>
+
+
+  </div>
+</footer>
+
+    </div>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Navbar js
+            var toggleOpen = document.getElementById('toggleOpen');
+            var toggleClose = document.getElementById('toggleClose');
+            var collapseMenu = document.getElementById('collapseMenu');
+
+            function handleClick() {
+                if (collapseMenu.style.display === 'block') {
+                    collapseMenu.style.display = 'none';
+                } else {
+                    collapseMenu.style.display = 'block';
+                }
+            }
+
+            toggleOpen.addEventListener('click', handleClick);
+            toggleClose.addEventListener('click', handleClick);
+
+            // FAQ js
+            document.querySelectorAll('.accordion').forEach(elm => {
+                const button = elm.querySelector('.toggle-button');
+                const content = elm.querySelector('.content');
+                const plusIcon = button.querySelector('.plus');
+
+                button.addEventListener('click', () => {
+                    const isHidden = content.classList.toggle('invisible');
+                    content.style.maxHeight = isHidden ? '0px' : `${content.scrollHeight + 100}px`;
+                    content.classList.toggle('pb-4', !isHidden);
+                    plusIcon.classList.toggle('hidden', !isHidden);
+                    plusIcon.classList.toggle('block', isHidden);
+                });
+            });
+
+            // scroll
+            document.querySelectorAll("a[href^='#']").forEach(anchor => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute("href");
+                    const target = document.querySelector(targetId);
+                    const offset = 70; // control scroll position
+
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop - offset,
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            });
+
+        });
+
+    </script>
+
+    
+</body>
+
+</html>

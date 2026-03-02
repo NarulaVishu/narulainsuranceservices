@@ -1,0 +1,851 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4'></script>
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">    
+
+    <style>
+        body {
+            font-family: Poppins, sans-serif;
+        }
+    </style>
+
+</head>
+
+<body class="max-w-[1920px] mx-auto ">
+    <div class="bg-white text-slate-900 text-[15px]">
+        <!-- navbar -->
+        <header class="sticky top-0 flex shadow-md py-2 px-4 sm:px-10 bg-white min-h-[70px] tracking-wide z-50">
+            <div class="flex flex-wrap items-center justify-between gap-5 w-full">
+                <a href="index.html" class="max-sm:hidden"><img src="images/logo1.png"
+                        alt="logo" class="w-80" /></a>
+                <a href="index.html" class="hidden max-sm:block"><img
+                        src="images/logo1.png" alt="logo" class="w-40" /></a>
+
+                <div id="collapseMenu"
+                    class="max-xl:hidden xl:!block max-xl:before:fixed max-xl:before:bg-black max-xl:before:opacity-50 max-xl:before:inset-0 max-xl:before:z-50">
+                    <button id="toggleClose"
+                        class="xl:hidden cursor-pointer fixed top-2 right-4 z-[100] rounded-full bg-white w-9 h-9 flex items-center justify-center border">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 fill-black"
+                            viewBox="0 0 320.591 320.591">
+                            <path
+                                d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
+                                data-original="#000000"></path>
+                            <path
+                                d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
+                                data-original="#000000"></path>
+                        </svg>
+                    </button>
+
+                    <ul
+                        class="xl:flex gap-x-5 max-xl:space-y-3 max-xl:fixed max-xl:bg-white max-xl:w-1/2 max-xl:min-w-[300px] max-xl:top-0 max-xl:left-0 max-xl:p-6 max-xl:h-full max-xl:shadow-md max-xl:overflow-auto z-50">
+                        <li class="mb-6 hidden max-xl:block">
+                            <a href="index.html"><img src="images/logo1.png" alt="logo"
+                                    class="w-36" />
+                            </a>
+                        </li>
+                        <li class="max-xl:border-b max-xl:border-gray-300 max-xl:py-3 px-3">
+                            <a href='index.html' class="hover:text-blue-700 block font-medium text-blue-700">Home</a>
+                        </li>
+                        <li class="max-xl:border-b max-xl:border-gray-300 max-xl:py-3 px-3">
+                            <a href='about.html' class="hover:text-blue-700 block font-medium">About Us</a>
+                        </li>
+                        
+                        <li class="max-xl:border-b max-xl:border-gray-300 max-xl:py-3 px-3 ">
+                            <a href='companies.html' class="hover:text-blue-700 block font-medium">Companies</a>
+                        </li>
+                        <li class="group max-lg:border-b max-lg:border-gray-300 max-lg:py-3 relative">
+                <p class="hover:text-blue-700 text-gray-600 text-[15px] font-semibold lg:hover:fill-blue-700 block">Services<svg
+                    xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" class="ml-1 inline-block fill-current"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M12 16a1 1 0 0 1-.71-.29l-6-6a1 1 0 0 1 1.42-1.42l5.29 5.3 5.29-5.29a1 1 0 0 1 1.41 1.41l-6 6a1 1 0 0 1-.7.29z"
+                      data-name="16" data-original="#000000" />
+                  </svg>
+                </p>
+                <ul
+                  class="absolute shadow-lg bg-white space-y-3 lg:top-5 max-lg:top-8 -left-6 min-w-[250px] z-50 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500">
+                  <li class="border-b border-gray-300 py-2"><a href='policy_guidance.html'
+                    class="hover:text-blue-700 text-gray-600 text-[15px] font-medium block">Policy Guidance and Advisory</a></li>
+                  <li class="border-b border-gray-300 py-2"><a href='claim_assistance.html'
+                    class="hover:text-blue-700 text-gray-600 text-[15px] font-medium block">Claim Assistance and Support</a></li>
+                  
+                </ul>
+              </li>
+                        <!-- <li class="max-xl:border-b max-xl:border-gray-300 max-xl:py-3 px-3">
+                            <a href='#testimonials' class="hover:text-blue-700 block font-medium">Testimonials</a>
+                        </li> -->
+                        
+                        <li class="max-xl:border-b max-xl:border-gray-300 max-xl:py-3 px-3 ">
+                            <a href='contact.html' class="hover:text-blue-700 block font-medium">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex max-xl:ml-auto gap-4">
+                    <a href="https://wa.me/919896682405"
+   target="_blank"
+   class="flex items-center justify-center w-14 h-14 
+          bg-[#25D366] hover:bg-[#1DA851] 
+          rounded-full shadow-lg hover:shadow-xl 
+          transition-all duration-300">
+
+    <!-- Official WhatsApp Logo SVG -->
+    <svg xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 32 32"
+         class="w-7 h-7"
+         fill="white">
+        <path d="M16 .396C7.164.396 0 7.56 0 16.396c0 2.893.756 5.71 2.192 8.196L0 32l7.602-2.153a15.93 15.93 0 008.398 2.396h.006C24.84 32.243 32 25.08 32 16.243 32 7.407 24.836.243 16 .243zm0 29.09a13.02 13.02 0 01-6.64-1.82l-.474-.282-4.51 1.277 1.204-4.397-.308-.451a13.05 13.05 0 1123.68-7.17c0 7.195-5.85 13.043-13.043 13.043zm7.167-9.79c-.392-.196-2.317-1.144-2.676-1.274-.36-.13-.622-.196-.884.196-.261.392-1.013 1.274-1.242 1.537-.228.261-.457.294-.849.098-.392-.196-1.654-.61-3.15-1.95-1.164-1.038-1.95-2.32-2.178-2.712-.228-.392-.024-.604.172-.8.176-.175.392-.457.588-.686.196-.228.261-.392.392-.653.13-.261.065-.49-.033-.686-.098-.196-.884-2.134-1.21-2.925-.317-.761-.64-.658-.884-.67l-.752-.013c-.261 0-.686.098-1.046.49s-1.373 1.34-1.373 3.267 1.406 3.79 1.602 4.051c.196.261 2.767 4.225 6.704 5.925.937.405 1.667.646 2.237.826.94.3 1.797.258 2.474.157.755-.112 2.317-.947 2.643-1.863.327-.915.327-1.7.228-1.863-.098-.163-.359-.261-.751-.457z"/>
+    </svg>
+
+</a>
+
+                    <button id="toggleOpen" class="xl:hidden cursor-pointer">
+                        <svg class="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div>
+            <!-- Hero Section -->
+            <div class="xl:min-h-[500px] bg-blue-50 px-4 sm:px-10 py-10">
+                <div class="grid xl:grid-cols-2 justify-center items-center gap-10 px-12">
+                    <div>
+                        <div class="max-w-3xl max-xl:mx-auto max-xl:text-center">
+                            <p class="mb-2 font-semibold text-blue-600"><span
+                                    class="rotate-90 inline-block mr-2">|</span> INSURANCE CONSULTANT & CLAIM SPECIALIST</p>
+                            <h1 class="md:text-5xl text-4xl font-bold md:!leading-[55px]">Honest Insurance Advice & Claim Support From a Trusted Specialist
+                            </h1>
+                            <p class="text-base leading-relaxed mt-6">Narula Insurance Services provides independent insurance guidance and professional claim assistance for families and businesses.
+From choosing the right policy to resolving claim issues, we stand with you at every step.</p>
+
+                            <div class="mt-8 text-left">
+  <a href="contact.html"><button 
+    class="bg-blue-600 hover:bg-blue-700 transition-all text-white font-semibold rounded-lg px-6 py-3 shadow-md">
+    Contact Us
+  </button></a>
+</div>
+                        </div>
+
+                        <section class="mt-12">
+                            <div class="container mx-auto">
+                                <div class="grid min-[450px]:grid-cols-2 md:grid-cols-3 gap-8 text-center bounce-animation1">
+                                    <div>
+                                        <h3 class="text-3xl font-semibold text-blue-600 counter" data-target="1000000">0</h3>
+                                        <p class="mt-3 font-medium text-base">Policies Sold</p>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-3xl font-semibold text-blue-600 counter" data-target="1000">0</h3>
+                                        <p class="mt-3 font-medium text-base">Claims Closed</p>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-3xl font-semibold text-blue-600">99.9%</h3>
+                                        <p class="mt-3 font-medium text-base">Dispute Resolution Rate</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+
+                    <div class="xl:aspect-[350/251]">
+                        <img src="images/bannerimage.png" alt="banner img"
+                            class="w-full h-full object-contain max-xl:object-top bounce-animation" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <div class="max-w-screen-xl max-lg:max-w-screen-sm mx-auto p-4 py-8" id="features">
+      <div class="grid lg:grid-cols-2 gap-x-8 gap-y-16 items-center">
+        <div>
+          <div class="max-lg:text-center">
+            <h2 class="text-slate-900 md:text-4xl text-3xl font-bold md:!leading-[45px] leading-[40px]">What We Help You With</h2>
+            <p class="text-[15px] text-slate-500 mt-6 leading-relaxed">Independent insurance advice and professional claim support to help you stay protected and confident in every decision.</p>
+          </div>
+
+          <hr class="my-10 border-gray-300" />
+
+          <div class="grid sm:grid-cols-2 gap-x-6 gap-y-10 max-lg:text-center">
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" class="fill-blue-700 w-8 h-8 mb-4 inline-block" viewBox="0 0 100 100">
+                <path d="M65.156 4.42c-8.327 0-15.13 6.855-15.13 15.202s6.803 15.165 15.13 15.165c7.017 0 12.924-4.863 14.626-11.382h13.843a3.798 3.798 0 0 0 3.791-3.805 3.798 3.798 0 0 0-3.79-3.8h-13.86C78.053 9.294 72.16 4.42 65.156 4.42zM6.391 15.8a3.798 3.798 0 0 0-3.79 3.805 3.798 3.798 0 0 0 3.79 3.8h36.397c-.21-1.234-.348-2.493-.348-3.783 0-1.304.134-2.575.348-3.821zm28.47 18.987c-7.018 0-12.92 4.89-14.619 11.418H6.392a3.783 3.783 0 0 0-.363 0 3.801 3.801 0 0 0-3.52 4.062 3.798 3.798 0 0 0 3.882 3.535H20.25c1.71 6.511 7.604 11.382 14.61 11.382 8.328 0 15.167-6.848 15.167-15.195 0-8.347-6.84-15.202-15.166-15.202zm22.383 11.418c.21 1.234.347 2.494.347 3.784 0 1.3-.134 2.57-.347 3.813h36.381a3.795 3.795 0 0 0 3.874-3.714 3.796 3.796 0 0 0-3.874-3.883H57.244zm7.912 18.979c-8.327 0-15.13 6.855-15.13 15.202S56.83 95.58 65.157 95.58c7.007 0 12.907-4.87 14.618-11.382h13.851a3.796 3.796 0 0 0 3.706-3.883 3.795 3.795 0 0 0-3.706-3.714H79.782c-1.701-6.527-7.608-11.418-14.626-11.418zM6.029 76.602a3.801 3.801 0 0 0-3.52 4.062 3.798 3.798 0 0 0 3.882 3.535h36.412a22.541 22.541 0 0 1-.348-3.813c0-1.29.138-2.55.348-3.784H6.39a3.783 3.783 0 0 0-.362 0z" data-original="#000000" />
+              </svg>
+              <h3 class="text-slate-900 text-base font-semibold mb-3">Policy Selection Guidance</h3>
+              <p class="text-slate-500 text-[15px] leading-relaxed">We help you choose the most suitable insurance plan based on your needs, not sales pressure.</p>
+            </div>
+
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=" w-8 h-8 mb-4 inline-block">
+  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12"/>
+  <circle cx="11" cy="11" r="4"/>
+  <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+</svg>
+              <h3 class="text-slate-900 text-base font-semibold mb-3">Clear Explanation of Terms & Coverage</h3>
+              <p class="text-slate-500 text-[15px] leading-relaxed">We simplify policy clauses and benefits so you fully understand what you’re buying.</p>
+            </div>
+
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=" w-8 h-8 mb-4 inline-block">
+  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12V8z"/>
+  <polyline points="14 2 14 8 20 8"/>
+  <polyline points="9 15 11 17 15 13"/>
+</svg>
+              <h3 class="text-slate-900 text-base font-semibold mb-3">Claim Filing & Documentation Help</h3>
+              <p class="text-slate-500 text-[15px] leading-relaxed">We guide you on required documents and correct filing steps to avoid delays or mistakes.</p>
+            </div>
+
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=" w-8 h-8 mb-4 inline-block">
+  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+  <line x1="12" y1="8" x2="12" y2="12"/>
+  <circle cx="12" cy="16" r="1"/>
+</svg>
+              <h3 class="text-slate-900 text-base font-semibold mb-3">Support in Case of Claim Rejection</h3>
+              <p class="text-slate-500 text-[15px] leading-relaxed">If your claim faces issues, we review the case and advise the best possible next steps.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="max-lg:-order-1">
+          <div class="w-full aspect-[4/3]">
+            <img src="images/aboutimage.png" class="w-full h-full object-contain rounded-md" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+            
+            <!-- Companies Section -->
+            <div id="Companies"
+                class="py-16 bg-gradient-to-t from-blue-100 via-blue-50 to-blue-100 md:mt-28 mt-16 px-4 sm:px-10">
+                <div class="container mx-auto">
+                    <div class="text-center max-w-4xl mx-auto">
+                        <p class="text-blue-600 font-semibold mb-2">INSURANCE COMPANIES</p>
+                        <h2 class="text-2xl md:text-3xl font-bold leading-relaxed">Work With Leading Insurance Companies
+                        </h2>
+                        <div class="max-w-2xl mx-auto mt-6">
+                            <p class="leading-relaxed">We work with trusted insurance providers to help you choose the right policy and get reliable claim support.</p>
+                        </div>
+                    </div>
+
+                    <div class="logo-slider mt-16">
+
+    <div class="logo-track">
+
+        <!-- FIRST SET -->
+        <div class="logo-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsa1Z3J06LUTQ9Ns-ug5KMkqs9Z_0uk1mxRg&s" style="height:80px" class="rounded-lg"></div>
+        <div class="logo-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyKVzM50uqeKSR1zPfcHwHrPfNKgneXwVZ5g&s" style="height:80px" class="rounded-lg"></div>
+        <div class="logo-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcx-bJq3kuX1uCADLTES-qARIw7xiK75XPvg&s" style="height:80px" class="rounded-lg"></div>
+        <div class="logo-card"><img src="https://etimg.etb2bimg.com/photo/54363745.cms" style="height:80px" class="rounded-lg"></div>
+        <div class="logo-card"><img src="https://bimabazaar.com/wp-content/uploads/2020/03/HDFC-Ergo-Gen-to-continue-its-merger-with-HDFC-Ergo-Health-this-year.png" style="height:80px" class="rounded-lg"></div>
+        <div class="logo-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwQPTyt7R1Xrha5b5aQXJhdpszz1WAQ2c-8g&s" style="height:80px" class="rounded-lg"></div>
+        <div class="logo-card"><img src="https://windshield-expert.s3.ap-south-1.amazonaws.com/wp-content/uploads/2024/09/17120543/AIS-Windshield-Website-Blog-National-Insurance-Process-in-Kolkata-Sep24.png" style="height:80px" class="rounded-lg"></div>
+        <div class="logo-card"><img src="https://www.healthcareradius.in/cloud/2021/11/15/1200px-Star_Health_and_Allied_Insurance.svg.png" style="height:80px" class="rounded-lg"></div>
+        <div class="logo-card"><img src="https://jainenthospital.org/wp-content/uploads/2025/10/Care-Health-Insurance.webp" style="height:80px" class="rounded-lg"></div>
+        <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/en/e/ed/The_Oriental_Insurance_Company_Logo.svg" style="height:80px" class="rounded-lg"></div>
+
+        <!-- DUPLICATE SET FOR LOOP -->
+        <div class="logo-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsa1Z3J06LUTQ9Ns-ug5KMkqs9Z_0uk1mxRg&s" style="height:80px" class="rounded-lg"></div>
+        <div class="logo-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyKVzM50uqeKSR1zPfcHwHrPfNKgneXwVZ5g&s" style="height:80px" class="rounded-lg"></div>
+        <div class="logo-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcx-bJq3kuX1uCADLTES-qARIw7xiK75XPvg&s" style="height:80px" class="rounded-lg"></div>
+        <div class="logo-card"><img src="https://etimg.etb2bimg.com/photo/54363745.cms" style="height:80px" class="rounded-lg"></div>
+        <div class="logo-card"><img src="https://bimabazaar.com/wp-content/uploads/2020/03/HDFC-Ergo-Gen-to-continue-its-merger-with-HDFC-Ergo-Health-this-year.png" style="height:80px" class="rounded-lg"></div>
+        <div class="logo-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwQPTyt7R1Xrha5b5aQXJhdpszz1WAQ2c-8g&s" style="height:80px" class="rounded-lg"></div>
+        <div class="logo-card"><img src="https://windshield-expert.s3.ap-south-1.amazonaws.com/wp-content/uploads/2024/09/17120543/AIS-Windshield-Website-Blog-National-Insurance-Process-in-Kolkata-Sep24.png" style="height:80px" class="rounded-lg"></div>
+        <div class="logo-card"><img src="https://www.healthcareradius.in/cloud/2021/11/15/1200px-Star_Health_and_Allied_Insurance.svg.png" style="height:80px" class="rounded-lg"></div>
+        <div class="logo-card"><img src="https://jainenthospital.org/wp-content/uploads/2025/10/Care-Health-Insurance.webp" style="height:80px" class="rounded-lg"></div>
+        <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/en/e/ed/The_Oriental_Insurance_Company_Logo.svg" style="height:80px" class="rounded-lg"></div>
+
+    </div>
+
+</div>
+                </div>
+            </div>
+
+            <!-- Services Section  -->
+            <div id="Services" class="relative isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+  <div aria-hidden="true" class="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl">
+    <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" class="mx-auto aspect-1155/678 w-288.75 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"></div>
+  </div>
+  <div class="mx-auto max-w-4xl text-center">
+    <h2 class="text-base/7 font-semibold text-indigo-600">Services</h2>
+    <p class="mt-2 text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-6xl">How We Help You</p>
+  </div>
+  <p class="mx-auto mt-6 max-w-2xl text-center text-lg font-medium text-pretty text-gray-600 sm:text-xl/8">From selecting the right insurance plan to guiding you during claims, we provide expert advice to protect your interests at every step.</p>
+  <div class="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2">
+    <div class="rounded-3xl rounded-t-3xl bg-white/60 p-8 ring-1 ring-gray-900/10 sm:mx-8 sm:rounded-b-none sm:p-10 lg:mx-0 lg:rounded-tr-none lg:rounded-bl-3xl">
+      
+      <p class="mt-4 flex items-baseline gap-x-2">
+        <span class="text-5xl font-semibold tracking-tight text-gray-900">Policy Guidance & Advisory</span>
+      </p>
+      <p class="mt-6 text-base/7 text-gray-600">We help you choose the right insurance policy by analysing your needs, explaining coverage clearly, and advising you on the best available options.</p>
+      <ul role="list" class="mt-8 space-y-3 text-sm/6 text-gray-600 sm:mt-10">
+        <li class="flex gap-x-3">
+          <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="h-6 w-5 flex-none text-indigo-600">
+            <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+          </svg>
+         Need-based policy selection
+        </li>
+        <li class="flex gap-x-3">
+          <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="h-6 w-5 flex-none text-indigo-600">
+            <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+          </svg>
+          Clear explanation of coverage
+        </li>
+        <li class="flex gap-x-3">
+          <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="h-6 w-5 flex-none text-indigo-600">
+            <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+          </svg>
+          Comparison across insurers
+        </li>
+        <li class="flex gap-x-3">
+          <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="h-6 w-5 flex-none text-indigo-600">
+            <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+          </svg>
+          Expert pre-purchase advice
+        </li>
+      </ul>
+      <a href="policy_guidance.html" aria-describedby="tier-hobby" class="mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-indigo-600 inset-ring inset-ring-indigo-200 hover:inset-ring-indigo-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:mt-10">Read More</a>
+
+    </div>
+    <div class="relative rounded-3xl bg-blue-700 p-8 shadow-2xl ring-1 ring-gray-900/10 sm:p-10">
+      
+      <p class="mt-4 flex items-baseline gap-x-2">
+        <span class="text-5xl font-semibold tracking-tight text-white">Claim Assistance & Support</span>
+        
+      </p>
+      <p class="mt-6 text-base/7 text-gray-300">We guide you throughout the entire claim process — from documentation to follow-ups — ensuring your claim is handled correctly and efficiently.</p>
+      <ul role="list" class="mt-8 space-y-3 text-sm/6 text-gray-300 sm:mt-10">
+        <li class="flex gap-x-3">
+          <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="h-6 w-5 flex-none text-indigo-400">
+            <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+          </svg>
+          Claim filing guidance
+        </li>
+        <li class="flex gap-x-3">
+          <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="h-6 w-5 flex-none text-indigo-400">
+            <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+          </svg>
+          Follow-ups with insurer
+        </li>
+        <li class="flex gap-x-3">
+          <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="h-6 w-5 flex-none text-indigo-400">
+            <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+          </svg>
+          Documentation support
+        </li>
+        <li class="flex gap-x-3">
+          <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="h-6 w-5 flex-none text-indigo-400">
+            <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+          </svg>
+          Help in case of rejection
+        </li>
+        <li class="flex gap-x-3">
+          <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="h-6 w-5 flex-none text-indigo-400">
+            <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+          </svg>
+         Claim file review before submission
+        </li>
+
+        
+      </ul>
+      <a href="claim_assistance.html" aria-describedby="tier-hobby" class="mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-indigo-600 inset-ring inset-ring-indigo-200 hover:inset-ring-indigo-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:mt-10 text-white">Read More</a>
+
+    </div>
+  </div>
+</div>
+
+
+            <!-- Claim Resolution Process Section -->
+<section class="py-20 bg-gradient-to-t from-blue-100 via-blue-50 to-blue-100">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Title -->
+    <div class="text-center mb-16">
+      <h2 class="text-5xl font-bold text-slate-700">
+        Our <span class="text-blue-600">Claim Resolution Process</span>
+      </h2>
+      <div class="w-32 h-1 bg-blue-600 mx-auto mt-4 rounded-full"></div>
+    </div>
+
+    <!-- Steps Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <!-- Step 1 -->
+      <div class="bg-white rounded-xl p-8 text-center shadow-sm hover:shadow-lg transition duration-300">
+        <p class="text-blue-600 font-semibold mb-4">STEP – 1</p>
+        <div class="text-5xl mb-4">📄</div>
+        <h3 class="text-lg font-semibold text-slate-700">
+          Rejection Review
+        </h3>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="bg-white rounded-xl p-8 text-center shadow-sm hover:shadow-lg transition duration-300">
+        <p class="text-blue-600 font-semibold mb-4">STEP – 2</p>
+        <div class="text-5xl mb-4">🔍</div>
+        <h3 class="text-lg font-semibold text-slate-700">
+          Detailed Analysis
+        </h3>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="bg-white rounded-xl p-8 text-center shadow-sm hover:shadow-lg transition duration-300">
+        <p class="text-blue-600 font-semibold mb-4">STEP – 3</p>
+        <div class="text-5xl mb-4">📝</div>
+        <h3 class="text-lg font-semibold text-slate-700">
+          Document Correction
+        </h3>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="bg-white rounded-xl p-8 text-center shadow-sm hover:shadow-lg transition duration-300">
+        <p class="text-blue-600 font-semibold mb-4">STEP – 4</p>
+        <div class="text-5xl mb-4">🤝</div>
+        <h3 class="text-lg font-semibold text-slate-700">
+          Insurer Coordination
+        </h3>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="bg-white rounded-xl p-8 text-center shadow-sm hover:shadow-lg transition duration-300">
+        <p class="text-blue-600 font-semibold mb-4">STEP – 5</p>
+        <div class="text-5xl mb-4">📤</div>
+        <h3 class="text-lg font-semibold text-slate-700">
+          Re-Submission Support
+        </h3>
+      </div>
+
+      <!-- Step 6 -->
+      <div class="bg-white rounded-xl p-8 text-center shadow-sm hover:shadow-lg transition duration-300">
+        <p class="text-blue-600 font-semibold mb-4">STEP – 6</p>
+        <div class="text-5xl mb-4">📊</div>
+        <h3 class="text-lg font-semibold text-slate-700">
+          Escalation Handling
+        </h3>
+      </div>
+
+      <!-- Step 7 -->
+      <div class="bg-white rounded-xl p-8 text-center shadow-sm hover:shadow-lg transition duration-300">
+        <p class="text-blue-600 font-semibold mb-4">STEP – 7</p>
+        <div class="text-5xl mb-4">🔄</div>
+        <h3 class="text-lg font-semibold text-slate-700">
+          Continuous Follow-up
+        </h3>
+      </div>
+
+      <!-- Step 8 -->
+      <div class="bg-white rounded-xl p-8 text-center shadow-sm hover:shadow-lg transition duration-300">
+        <p class="text-blue-600 font-semibold mb-4">STEP – 8</p>
+        <div class="text-5xl mb-4">✅</div>
+        <h3 class="text-lg font-semibold text-slate-700">
+          Final Resolution
+        </h3>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Insurance Categories Section -->
+<section class="py-20 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-6">
+    
+    <!-- Heading -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-slate-800 mb-4 uppercase">
+        Insurance Categories We Provide
+      </h2>
+      <p class="text-slate-500 max-w-2xl mx-auto">
+        We partner with leading insurance providers to offer comprehensive and reliable coverage solutions tailored to your needs.
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      
+      <!-- Card 1 -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-2">
+        <div class="text-5xl mb-4">
+            <img src="images/motor.png" alt="Motor Insurance">
+        </div>
+        <h3 class="text-2xl font-semibold text-slate-800 mb-3">Motor Insurance</h3>
+        <p class="text-slate-600 mb-4">
+          Protect your vehicle from accidents, theft, and third-party liabilities with affordable premium plans.
+        </p>
+        <ul class="space-y-2 text-slate-700">
+          <li>✔ Third-Party Cover</li>
+          <li>✔ Comprehensive Plans</li>
+          <li>✔ Zero Depreciation</li>
+        </ul>
+      </div>
+
+      <!-- Card 2 -->  
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-2">
+        <div class="text-5xl mb-4">
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTQ1utMTKpEj2R0-68DEUWIrYdUs6UEbtihdB9GWaGlK5GrOeLx" class="" alt="">
+        </div>
+        <h3 class="text-2xl font-semibold text-slate-800 mb-3">Health Insurance</h3>
+        <p class="text-slate-600 mb-4">
+          Comprehensive medical coverage including hospitalization, pre & post treatment, and cashless facilities.
+        </p>
+        <ul class="space-y-2 text-slate-700">
+          <li>✔ Cashless Treatment</li>
+          <li>✔ Family Floater Plans</li>
+          <li>✔ Critical Illness Cover</li>
+        </ul>
+      </div>
+
+
+     
+
+      <!-- Card 3 -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-2">
+        <div class="text-5xl mb-4">
+            <img src="images/travel.png" alt="Travel Insurance">
+        </div>
+        <h3 class="text-2xl font-semibold text-slate-800 mb-3">Travel Insurance</h3>
+        <p class="text-slate-600 mb-4">
+          Stay protected during domestic and international trips with medical and baggage coverage.
+        </p>
+        <ul class="space-y-2 text-slate-700">
+          <li>✔ Global Coverage</li>
+          <li>✔ Emergency Medical</li>
+          <li>✔ Trip Cancellation</li>
+        </ul>
+      </div>
+
+      
+
+      <!-- Card 4 -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-2">
+        <div class="text-5xl mb-4">
+            <img src="images/accident.png" alt="Personal Accident Insurance">
+        </div>
+        <h3 class="text-2xl font-semibold text-slate-800 mb-3">Personal Accident</h3>
+        <p class="text-slate-600 mb-4">
+          Financial protection against accidental injuries, disability, or unforeseen events.
+        </p>
+        <ul class="space-y-2 text-slate-700">
+          <li>✔ Disability Cover</li>
+          <li>✔ Accidental Death Benefit</li>
+          <li>✔ 24/7 Protection</li>
+        </ul>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-2">
+        <div class="text-5xl mb-4">
+            <img src="images/fire.png" alt="Fire Insurance">
+        </div>
+        <h3 class="text-2xl font-semibold text-slate-800 mb-3">Fire Insurance</h3>
+        <p class="text-slate-600 mb-4">
+          Protection against losses or damages caused by fire, lightning, and natural calamities.
+        </p>
+        <ul class="space-y-2 text-slate-700">
+          <li>✔ Building & Asset Coverage</li>
+          <li>✔ Natural Disaster Protection</li>
+          <li>✔ Quick Claim Support</li>
+        </ul>
+      </div>
+
+      <!-- card 6  -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-2">
+  <div class="text-5xl mb-4">
+    <img src="images/burglary.png" alt="Burglary Insurance">
+  </div>
+  <h3 class="text-2xl font-semibold text-slate-800 mb-3">Burglary Insurance</h3>
+  <p class="text-slate-600 mb-4">
+    Safeguard your property and valuables against theft and burglary losses.
+  </p>
+  <ul class="space-y-2 text-slate-700">
+    <li>✔ Theft Protection</li>
+    <li>✔ Property Damage Cover</li>
+    <li>✔ Secure Business Assets</li>
+  </ul>
+</div>
+
+      <!-- card 7 -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-2">
+  <div class="text-5xl mb-4">
+    <img src="images/shop.png" alt="Shop Insurance">
+  </div>
+  <h3 class="text-2xl font-semibold text-slate-800 mb-3">Shop Insurance</h3>
+  <p class="text-slate-600 mb-4">
+    Protect your retail shop from unexpected damages, theft, and liabilities.
+  </p>
+  <ul class="space-y-2 text-slate-700">
+    <li>✔ Inventory Protection</li>
+    <li>✔ Fire & Theft Cover</li>
+    <li>✔ Public Liability Protection</li>
+  </ul>
+</div>
+
+      <!-- card 8 -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-2">
+  <div class="text-5xl mb-4">
+    <img src="images/factory.png" alt="Factory Insurance">
+  </div>
+  <h3 class="text-2xl font-semibold text-slate-800 mb-3">Factory Insurance</h3>
+  <p class="text-slate-600 mb-4">
+    Comprehensive coverage for factories against operational risks and damages.
+  </p>
+  <ul class="space-y-2 text-slate-700">
+    <li>✔ Machinery Breakdown Cover</li>
+    <li>✔ Fire & Natural Disaster Protection</li>
+    <li>✔ Business Interruption Support</li>
+  </ul>
+</div>
+
+<!-- card 9  -->
+ <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-2">
+  <div class="text-5xl mb-4">
+    <img src="images/worker.png" alt="Worker Comprehensive Insurance">
+  </div>
+  <h3 class="text-2xl font-semibold text-slate-800 mb-3">Worker Comprehensive</h3>
+  <p class="text-slate-600 mb-4">
+    Complete protection for workers against workplace injuries and medical emergencies.
+  </p>
+  <ul class="space-y-2 text-slate-700">
+    <li>✔ Workplace Accident Cover</li>
+    <li>✔ Medical Expense Support</li>
+    <li>✔ Disability & Compensation Benefits</li>
+  </ul>
+</div>
+
+    </div>
+  </div>
+</section>
+
+            <!-- FAQ section -->
+            <section class="py-16">
+    <div class="max-w-5xl mx-auto px-6">
+
+      <!-- Heading -->
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-slate-900">Frequently Asked Questions</h2>
+        <p class="mt-4 text-slate-600 text-lg">
+          Clear answers to help you understand our insurance services better.
+        </p>
+      </div>
+
+      <!-- FAQ Container -->
+      <div class="space-y-4">
+
+        <!-- Item 1 -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200">
+          <button class="faq-toggle w-full flex justify-between items-center px-6 py-5 text-left">
+            <span class="text-lg font-semibold text-slate-900">
+              What types of insurance policies do you offer?
+            </span>
+            <span class="icon text-blue-600 text-2xl font-light">+</span>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out px-6">
+            <p class="py-4 text-slate-600 leading-relaxed">
+              We provide Health, Motor, Travel, and Business Insurance solutions.
+              Our advisors analyze your requirements and recommend policies that offer
+              maximum coverage with competitive premiums.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200">
+          <button class="faq-toggle w-full flex justify-between items-center px-6 py-5 text-left">
+            <span class="text-lg font-semibold text-slate-900">
+              How do I file an insurance claim?
+            </span>
+            <span class="icon text-blue-600 text-2xl font-light">+</span>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out px-6">
+            <p class="py-4 text-slate-600 leading-relaxed">
+              You can initiate a claim through our website or by contacting our support team.
+              Our claim assistance experts will guide you through documentation and ensure
+              a smooth and transparent settlement process.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200">
+          <button class="faq-toggle w-full flex justify-between items-center px-6 py-5 text-left">
+            <span class="text-lg font-semibold text-slate-900">
+              What documents are required for claim settlement?
+            </span>
+            <span class="icon text-blue-600 text-2xl font-light">+</span>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out px-6">
+            <p class="py-4 text-slate-600 leading-relaxed">
+              Required documents vary by policy type but typically include policy documents,
+              identity proof, completed claim form, invoices/bills, and supporting reports
+              such as medical documents or FIR copies where applicable.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200">
+          <button class="faq-toggle w-full flex justify-between items-center px-6 py-5 text-left">
+            <span class="text-lg font-semibold text-slate-900">
+              How long does the claim settlement process take?
+            </span>
+            <span class="icon text-blue-600 text-2xl font-light">+</span>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out px-6">
+            <p class="py-4 text-slate-600 leading-relaxed">
+              Once all required documents are submitted, most claims are processed within
+              7–15 working days. Complex cases may require additional verification.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200">
+          <button class="faq-toggle w-full flex justify-between items-center px-6 py-5 text-left">
+            <span class="text-lg font-semibold text-slate-900">
+              Can I renew my insurance policy online?
+            </span>
+            <span class="icon text-blue-600 text-2xl font-light">+</span>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out px-6">
+            <p class="py-4 text-slate-600 leading-relaxed">
+              Yes, policy renewal can be completed online quickly and securely.
+              We also send automated reminders before your policy expiry date.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200">
+          <button class="faq-toggle w-full flex justify-between items-center px-6 py-5 text-left">
+            <span class="text-lg font-semibold text-slate-900">
+              Do you provide dedicated claim assistance support?
+            </span>
+            <span class="icon text-blue-600 text-2xl font-light">+</span>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out px-6">
+            <p class="py-4 text-slate-600 leading-relaxed">
+              Absolutely. Our claim assistance team provides end-to-end support —
+              from documentation review to final settlement — ensuring a hassle-free experience.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+        </div>
+
+        <!-- footer section -->
+       <footer class="pt-12 pb-8 px-10 tracking-wide">
+        <div class="max-w-screen-xl mx-auto">
+          <div class="flex flex-col lg:flex-row justify-between gap-10">
+
+      <!-- LEFT SIDE (Logo) -->
+      <div class="flex items-start">
+        <a href="index.html">
+          <img src="images/logo1.png" alt="logo" class="w-70">
+        </a>
+      </div>
+
+      <!-- RIGHT SIDE (2 Columns) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-12">
+
+        <!-- Useful Links -->
+        <div>
+          <h4 class="text-base mb-4 text-black font-bold uppercase">
+            Useful Links
+          </h4>
+          <ul class="space-y-4">
+            <li>
+              <a href="index.html" class="text-gray-600 hover:text-blue-600 transition duration-300 text-sm">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="companies.html" class="text-gray-600 hover:text-blue-600 transition duration-300 text-sm">
+                Companies
+              </a>
+            </li>
+            <li>
+              <a href="contact.html" class="text-gray-600 hover:text-blue-600 transition duration-300 text-sm">
+                Contact us
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Information -->
+        <div>
+          <h4 class="text-base mb-4 text-black font-bold uppercase">
+            Information
+          </h4>
+          <ul class="space-y-4">
+            <li>
+              <a href="about.html" class="text-gray-600 hover:text-blue-600 transition duration-300 text-sm">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a href="policy_guidance.html" class="text-gray-600 hover:text-blue-600 transition duration-300 text-sm">
+                Policy guidance and Advisory
+              </a>
+            </li>
+            <li>
+              <a href="claim_assistance.html" class="text-gray-600 hover:text-blue-600 transition duration-300 text-sm">
+                Claim Assistance and support
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom -->
+     <div class="flex justify-between items-center mt-10">
+  
+  <p class="text-gray-500 text-sm font-bold">
+     © 2026 Narula Insurance Services. All rights reserved.
+  </p>
+
+  <p class="text-gray-500 text-sm">
+   Developed and Designed by 
+   <a href="https://www.linkedin.com/in/vishu-narula-252871201/">Vishu Narula</a>
+  </p>
+
+</div>
+
+
+  </div>
+</footer>
+
+    </div>
+
+    <script src="script.js">
+
+        
+
+    </script>
+
+    
+</body>
+
+</html>
