@@ -137,7 +137,7 @@
   <input type="hidden" name="_subject" value="New Insurance Enquiry - Narula Insurance">
   <input type="hidden" name="_captcha" value="false">
   <input type="hidden" name="_template" value="table">
-  <input type="hidden" name="_next" value="https://narulainsuranceservices.vercel.app/thankyou.html">
+  <input type="hidden" name="_next" value="http://127.0.0.1:5500/thankyou.html">
   <input type="hidden" name="_autoresponse" value="Thank you for contacting Narula Insurance. We will contact you shortly.">
 
   <div class="space-y-4 mt-8">
@@ -235,15 +235,81 @@
         <div class="max-w-screen-xl mx-auto">
           <div class="flex flex-col lg:flex-row justify-between gap-10">
 
-      <!-- LEFT SIDE (Logo) -->
-      <div class="flex items-start">
-        <a href="index.html">
-          <img src="images/logo1.png" alt="logo" class="w-70">
-        </a>
-      </div>
+
+      <!-- LEFT SIDE (Logo + Contact Info Final Version) -->
+<div class="flex flex-col items-start space-y-6">
+
+  <!-- Logo -->
+  <a href="index.html">
+    <img src="images/logo1.png" alt="logo" class="w-70">
+  </a>
+
+  <!-- Address (Clickable Map Link) -->
+  <div class="flex items-center gap-4 group">
+    
+    <!-- Icon Badge -->
+    <div class="w-10 h-10 flex items-center justify-center 
+                rounded-xl bg-blue-50 text-blue-600 
+                group-hover:bg-blue-600 group-hover:text-white
+                transition-all duration-300">
+      
+      <!-- Modern Location Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" 
+           class="w-5 h-5" 
+           fill="none" 
+           stroke="currentColor" 
+           stroke-width="1.8" 
+           viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M12 21s-6-5.686-6-10a6 6 0 1112 0c0 4.314-6 10-6 10z"/>
+        <circle cx="12" cy="11" r="2"/>
+      </svg>
+    </div>
+
+    <!-- Clickable Address -->
+    <a href="https://www.google.com/maps/search/?api=1&query=Basement+402+Mughal+Canal+Karnal"
+       target="_blank"
+       class="text-sm text-gray-600 hover:text-blue-600 transition">
+      Basement 402, Mughal Canal, Karnal
+    </a>
+  </div>
+
+  <!-- Phone -->
+  <div class="flex items-center gap-4 group">
+    
+    <!-- Icon Badge -->
+    <div class="w-10 h-10 flex items-center justify-center 
+                rounded-xl bg-blue-50 text-blue-600 
+                group-hover:bg-blue-600 group-hover:text-white
+                transition-all duration-300">
+
+      <!-- Modern Phone Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" 
+           class="w-5 h-5" 
+           fill="none" 
+           stroke="currentColor" 
+           stroke-width="1.8" 
+           viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M22 16.92v3a2 2 0 01-2.18 2 19.72 19.72 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.72 19.72 0 012.08 4.18 2 2 0 014.06 2h3a2 2 0 012 1.72c.12.89.31 1.76.57 2.6a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.48-1.09a2 2 0 012.11-.45c.84.26 1.71.45 2.6.57A2 2 0 0122 16.92z"/>
+      </svg>
+    </div>
+
+    <p class="text-sm text-gray-600">
+      <a href="tel:9896682405" class="hover:text-blue-600 transition">
+        9896682405
+      </a>,
+      <a href="tel:9996002405" class="hover:text-blue-600 transition">
+        9996002405
+      </a>
+    </p>
+
+  </div>
+
+</div>
 
       <!-- RIGHT SIDE (2 Columns) -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-12">
+      <div class="grid grid-cols-1 sm:grid-cols-2  gap-12">
 
         <!-- Useful Links -->
         <div>
@@ -313,7 +379,6 @@
 
   </div>
 </footer>
-
     </div>
 
     <script>
